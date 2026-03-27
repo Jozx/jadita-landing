@@ -7,21 +7,37 @@ interface GalleryCardProps {
 }
 
 const GalleryCard: React.FC<GalleryCardProps> = ({ product }) => {
+  const fallbackSrc = `https://placehold.co/400x400/E8D5C0/8B3A2A?text=${encodeURIComponent(product.name)}`;
+
   return (
-    <article className="group flex flex-col items-center bg-white border border-primary/20 rounded-xl shadow-sm overflow-hidden transition-transform duration-300 hover:scale-105">
-      <div className="w-full aspect-square bg-secondary overflow-hidden">
-        <Image 
-          src={product.image.src} 
-          alt={product.image.alt || product.name} 
-          className="w-full h-full transition-transform duration-500 group-hover:scale-110"
+    <article className="group flex flex-col bg-bg border border-primary/10 rounded-2xl shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+      {/* Image container with hover overlay */}
+      <div className="relative w-full aspect-square bg-secondary overflow-hidden">
+        <Image
+          src={product.image.src}
+          alt={product.image.alt || product.name}
+          fallbackSrc={fallbackSrc}
+          className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          loading="lazy"
         />
+        {/* Hover overlay */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-0 bg-gradient-to-t from-text/50 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4"
+        >
+          <span className="text-white font-body text-sm font-semibold translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+            Consultar precio →
+          </span>
+        </div>
       </div>
-      <div className="w-full text-center py-4 px-2 bg-white flex flex-col items-center justify-center space-y-1">
-        <h3 className="font-body font-medium text-text text-sm sm:text-base">
+
+      {/* Card body */}
+      <div className="w-full py-4 px-4 flex flex-col space-y-1">
+        <h3 className="font-body font-semibold text-text text-sm sm:text-base leading-snug">
           {product.name}
         </h3>
         {product.description && (
-          <p className="font-body text-xs text-text/70 px-1 leading-snug">{product.description}</p>
+          <p className="font-body text-xs text-text/55 leading-relaxed">{product.description}</p>
         )}
       </div>
     </article>

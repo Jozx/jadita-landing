@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Gallery from './components/Gallery';
+import HowItWorks from './components/HowItWorks';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import siteConfig from './config/site.config';
@@ -25,6 +26,7 @@ function App() {
           cta={resolvedCta} 
         />
         <Gallery products={siteConfig.products} />
+        <HowItWorks />
         <Contact channels={siteConfig.contact} />
       </main>
       <Footer brand={siteConfig.brand} channels={siteConfig.contact} />
