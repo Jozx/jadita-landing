@@ -1,0 +1,17 @@
+{
+  "name": "Jadita Creaciones",
+  "short_name": "Jadita",
+  "description": "Sublimación y personalización en San Lorenzo, Paraguay",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF6F1",
+  "theme_color": "#C4724A",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
