@@ -34,13 +34,13 @@ const Hero: React.FC<HeroProps> = ({ brand, image, cta }) => {
       />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full py-12 lg:py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16 items-center">
 
           {/* — Left: copy — */}
-          <div className="flex flex-col space-y-8 text-center lg:text-left">
+          <div className="flex flex-col space-y-8 text-center md:text-left">
 
             {/* Eyebrow */}
-            <span className="animate-fade-up inline-flex self-center lg:self-start items-center gap-2 bg-secondary text-accent text-xs font-body font-semibold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">
+            <span className="animate-fade-up inline-flex self-center md:self-start items-center gap-2 bg-secondary text-accent text-xs font-body font-semibold uppercase tracking-widest px-4 py-2 rounded-full shadow-sm">
               <span className="w-1.5 h-1.5 rounded-full bg-primary inline-block" />
               Sublimación · San Lorenzo, Paraguay
             </span>
@@ -57,13 +57,13 @@ const Hero: React.FC<HeroProps> = ({ brand, image, cta }) => {
                   />
                 </span>
               </h1>
-              <p className="font-body text-lg sm:text-xl text-text/70 max-w-lg mx-auto lg:mx-0">
+              <p className="font-body text-lg sm:text-xl text-text/70 max-w-lg mx-auto md:mx-0">
                 {brand.subtagline}
               </p>
             </div>
 
             {/* CTA */}
-            <div className="animate-fade-up delay-200 flex justify-center lg:justify-start">
+            <div className="animate-fade-up delay-200 flex justify-center md:justify-start">
               <ExternalLink
                 href={cta.url}
                 ariaLabel={cta.label}
@@ -77,7 +77,7 @@ const Hero: React.FC<HeroProps> = ({ brand, image, cta }) => {
             {/* Trust badges */}
             <ul
               aria-label="Por qué elegirnos"
-              className="animate-fade-up delay-300 flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2"
+              className="animate-fade-up delay-300 flex flex-wrap justify-center md:justify-start gap-x-6 gap-y-2"
             >
               {trustBadges.map((badge) => (
                 <li key={badge.label} className="flex items-center gap-1.5 text-sm text-text/60 font-body">
@@ -89,8 +89,8 @@ const Hero: React.FC<HeroProps> = ({ brand, image, cta }) => {
           </div>
 
           {/* — Right: image — */}
-          <div className="animate-fade-in delay-200 relative w-full min-h-[280px] h-full lg:h-[520px] mt-4 lg:mt-0">
-            <div className="w-full h-full rounded-3xl shadow-2xl overflow-hidden relative">
+          <div className="animate-fade-in delay-200 relative w-full h-full min-h-[300px] md:min-h-[500px] mt-4 md:mt-0 order-last md:order-none">
+            <div className="w-full h-full rounded-2xl shadow-2xl overflow-hidden relative">
               <Image
                 src={image.src}
                 alt={image.alt}
@@ -103,7 +103,7 @@ const Hero: React.FC<HeroProps> = ({ brand, image, cta }) => {
             {/* Decorative frame */}
             <div
               aria-hidden="true"
-              className="absolute -z-10 inset-0 translate-x-4 translate-y-4 rounded-3xl border-2 border-primary/25"
+              className="absolute -z-10 inset-0 translate-x-4 translate-y-4 rounded-2xl border-2 border-primary/25"
             />
             {/* Floating badge - hidden on very small screens to avoid overflow */}
             <div

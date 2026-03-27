@@ -30,7 +30,7 @@ function App() {
         <Contact channels={siteConfig.contact} />
       </main>
       <Footer brand={siteConfig.brand} channels={siteConfig.contact} />
-      <WhatsAppFloat />
+      <WhatsAppFloat url={siteConfig.contact.whatsapp.url} />
     </div>
   );
 }

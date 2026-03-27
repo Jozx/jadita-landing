@@ -57,7 +57,7 @@ const Contact: React.FC<ContactProps> = ({ channels }) => {
 
         {/* Buttons */}
         <div className="flex flex-col items-center space-y-5">
-          <p className="font-body text-xs font-medium text-text/40 uppercase tracking-wider mb-1">
+          <p className="text-center text-sm text-[#8B3A2A] font-medium mb-4 tracking-wide uppercase">
             ¿Listo para pedir?
           </p>
           {channels.whatsapp && <ContactButton type="whatsapp" data={channels.whatsapp} />}

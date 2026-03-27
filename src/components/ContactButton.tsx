@@ -4,9 +4,9 @@ import ExternalLink from './ui/ExternalLink';
 import WhatsAppIcon from './ui/WhatsAppIcon';
 
 const stylesMap: Record<string, string> = {
-  whatsapp: 'bg-whatsapp hover:bg-whatsapp-dark text-white py-4 text-base shadow-lg shadow-whatsapp/20',
-  instagram: 'border border-instagram-pink/30 hover:bg-instagram-pink/5 text-text py-3 text-sm',
-  tiktok: 'border border-black/10 hover:bg-black/5 text-text py-3 text-sm',
+  whatsapp: 'bg-[#25D366] text-white py-4 text-base shadow-lg shadow-[#25D366]/20',
+  instagram: 'bg-transparent border-2 border-[#E1306C] text-[#E1306C] py-3 text-sm',
+  tiktok: 'bg-transparent border-2 border-[#2C1A10] text-[#2C1A10] py-3 text-sm',
 };
 
 const iconsMap: Record<string, React.ReactNode> = {

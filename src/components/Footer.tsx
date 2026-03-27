@@ -28,15 +28,13 @@ const Footer: React.FC<FooterProps> = ({ brand, channels }) => {
           <div className="mb-6">
             <span className="font-heading text-3xl font-bold text-secondary">{brand.name.split(' ')[0]}</span>
             <p className="font-body text-sm text-secondary/50 mt-1 uppercase tracking-widest">{brand.tagline}</p>
+            <p className="text-sm text-[#C4724A] mt-1">
+              📍 San Lorenzo, Paraguay
+            </p>
+            <p className="text-xs text-[#8B3A2A] mt-1 italic">
+              Hecho con amor para regalos únicos
+            </p>
           </div>
-
-          <p className="font-body text-secondary/60 text-base mb-8 max-w-xs">
-            Hecho con amor para regalos únicos 💖
-          </p>
-
-          <p className="font-body text-secondary/40 text-sm mb-8 flex items-center gap-2">
-            <span>📍 {brand.location}</span>
-          </p>
 
           {/* Navigation */}
           <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 mb-10" aria-label="Footer Navigation">
@@ -70,7 +68,7 @@ const Footer: React.FC<FooterProps> = ({ brand, channels }) => {
           </div>
 
           {/* Divider */}
-          <div className="w-full max-w-sm h-px bg-secondary/10 mb-8" />
+          <hr className="border-[#C4724A]/20 my-4 w-24 mx-auto" />
 
           {/* Legal */}
           <p className="font-body text-[10px] text-secondary/30 uppercase tracking-widest">
