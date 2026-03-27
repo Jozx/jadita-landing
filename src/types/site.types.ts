@@ -40,6 +40,7 @@ export interface ProductConfig {
   id: string;
   name: string;
   description: string;
+  whatsappMessage: string;
   image: ImageConfig;
 }
 
@@ -59,10 +60,18 @@ export interface ThemeConfig {
   };
 }
 
+export interface AboutConfig {
+  title: string;
+  description: string;
+  badge: string;
+  image: ImageConfig;
+}
+
 export interface SiteConfig {
   brand: BrandConfig;
   contact: ContactConfig;
   nav: NavItem[];
+  about: AboutConfig;
   hero: {
     image: ImageConfig;
   };

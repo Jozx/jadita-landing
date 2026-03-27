@@ -56,10 +56,15 @@ const Contact: React.FC<ContactProps> = ({ channels }) => {
         </p>
 
         {/* Buttons */}
-        <div className="flex flex-col items-center space-y-4">
+        <div className="flex flex-col items-center space-y-5">
+          <p className="font-body text-xs font-medium text-text/40 uppercase tracking-wider mb-1">
+            ¿Listo para pedir?
+          </p>
           {channels.whatsapp && <ContactButton type="whatsapp" data={channels.whatsapp} />}
-          {channels.instagram && <ContactButton type="instagram" data={channels.instagram} />}
-          {channels.tiktok && <ContactButton type="tiktok" data={channels.tiktok} />}
+          <div className="flex flex-col sm:flex-row items-center gap-4 w-full max-w-sm sm:max-w-md justify-center">
+            {channels.instagram && <ContactButton type="instagram" data={channels.instagram} />}
+            {channels.tiktok && <ContactButton type="tiktok" data={channels.tiktok} />}
+          </div>
         </div>
       </div>
     </section>

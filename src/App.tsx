@@ -6,6 +6,8 @@ import HowItWorks from './components/HowItWorks';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import siteConfig from './config/site.config';
+import About from './components/About';
+import WhatsAppFloat from './components/ui/WhatsAppFloat';
 
 function App() {
   const resolvedCta = siteConfig.contact.whatsapp;
@@ -22,11 +24,13 @@ function App() {
           image={siteConfig.hero.image} 
           cta={resolvedCta} 
         />
+        <About config={siteConfig.about} />
         <Gallery products={siteConfig.products} />
         <HowItWorks />
         <Contact channels={siteConfig.contact} />
       </main>
       <Footer brand={siteConfig.brand} channels={siteConfig.contact} />
+      <WhatsAppFloat />
     </div>
   );
 }

@@ -34,9 +34,23 @@ const siteConfig = {
 
   nav: [
     { label: "Inicio",    href: "#inicio" },
+    { label: "Nosotras",  href: "#nosotras" },
     { label: "Productos", href: "#productos" },
     { label: "Contacto",  href: "#contacto" },
   ],
+
+  about: {
+    title: "Quiénes somos",
+    description: `Somos un emprendimiento familiar de San Lorenzo, 
+      Paraguay. Nos especializamos en sublimación y personalización 
+      de productos para particulares y empresas. 
+      Cada pieza es única, hecha con dedicación.`,
+    badge: "📍 San Lorenzo, Paraguay",
+    image: {
+      src: "/images/hero.webp", // TODO: replace with team/workshop photo
+      alt: "Equipo Jadita Creaciones en el taller",
+    }
+  },
 
   hero: {
     image: {
@@ -50,6 +64,7 @@ const siteConfig = {
       id: "tazas",
       name: "Tazas sublimadas",
       description: "Personalizadas con tu diseño o foto favorita",
+      whatsappMessage: 'Hola! Me interesa consultar sobre Tazas sublimadas 🎨',
       image: {
         src: "/images/tazas.webp",
         alt: "Tazas sublimadas Jadita",
@@ -59,6 +74,7 @@ const siteConfig = {
       id: "remeras",
       name: "Remeras personalizadas",
       description: "Algodón y poliéster en todos los talles",
+      whatsappMessage: 'Hola! Me interesa consultar sobre Remeras personalizadas 👕',
       image: {
         src: "/images/remeras.webp",
         alt: "Remeras Jadita",
@@ -68,6 +84,7 @@ const siteConfig = {
       id: "chopperas",
       name: "Chopperas",
       description: "Ideales para eventos y regalos únicos",
+      whatsappMessage: 'Hola! Me interesa consultar sobre Chopperas 🍺',
       image: {
         src: "/images/chopperas.webp",
         alt: "Chopperas Jadita",
@@ -77,6 +94,7 @@ const siteConfig = {
       id: "empresariales",
       name: "Regalos empresariales",
       description: "Kits corporativos con tu marca",
+      whatsappMessage: 'Hola! Me interesa consultar sobre Regalos empresariales 💼',
       image: {
         src: "/images/empresariales.webp",
         alt: "Regalos empresariales Jadita",

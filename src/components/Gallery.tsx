@@ -3,6 +3,8 @@ import { SECTIONS } from '../constants/sections';
 import { ProductConfig } from '../types/site.types';
 import GalleryCard from './GalleryCard';
 import { useInView } from '../hooks/useInView';
+import siteConfig from '../config/site.config';
+import { buildProductWhatsAppUrl } from '../utils/contact.utils';
 
 interface GalleryProps {
   products: ProductConfig[];
@@ -10,6 +12,7 @@ interface GalleryProps {
 
 const Gallery: React.FC<GalleryProps> = ({ products }) => {
   const { ref, inView } = useInView<HTMLDivElement>({ threshold: 0.1 });
+  const { whatsapp } = siteConfig.contact;
 
   return (
     <section id={SECTIONS.PRODUCTS} aria-labelledby="gallery-title" className="py-16 md:py-24 bg-bg">
@@ -41,7 +44,10 @@ const Gallery: React.FC<GalleryProps> = ({ products }) => {
               className={`transition-all duration-700 ${inView ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-12'}`}
               style={{ transitionDelay: inView ? `${(i % 4) * 100 + 200}ms` : '0ms' }}
             >
-              <GalleryCard product={product} />
+              <GalleryCard 
+                product={product} 
+                whatsappUrl={buildProductWhatsAppUrl(whatsapp.number, product.whatsappMessage)}
+              />
             </div>
           ))}
         </div>
