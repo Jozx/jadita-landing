@@ -6,12 +6,9 @@ import HowItWorks from './components/HowItWorks';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import siteConfig from './config/site.config';
-import { ContactChannel } from './types/site.types';
 
 function App() {
-  const ctaPath: string[] = ['contact', 'whatsapp']; // Hard-mapping because of the way TS types site.config
-  // In TS it's better to just pass siteConfig.contact.whatsapp directly, but keeping structure close
-  const resolvedCta = siteConfig.contact.whatsapp as ContactChannel;
+  const resolvedCta = siteConfig.contact.whatsapp;
 
   return (
     <div className="font-body text-text bg-bg antialiased selection:bg-primary/20 selection:text-text">
